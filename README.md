@@ -1,6 +1,7 @@
 # Secure Secrets App
 
 Secure Secrets App is a web application designed to allow users to share and discover secrets while prioritizing security and confidentiality.
+Live Link: [https://securesecretsapp.netlify.app/](https://securesecretsapp.netlify.app/)
 
 ## Table of Contents
 
@@ -49,6 +50,9 @@ These instructions will get you a copy of the project up and running on your loc
 3. Install dependencies:
 
    ```bash
+   cd frontend
+   npm install
+   cd ../backend
    npm install
    ```
 
@@ -56,11 +60,19 @@ These instructions will get you a copy of the project up and running on your loc
 
 Describe how to use the application and any specific steps or features.
 
+-> Frontend
 ```bash
-npm start
+cd frontend
+npm run dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) in your browser to access the app.
+-> Backend
+```bash
+cd backend
+npm run dev
+```
+
+Visit [http://localhost:5173](http://localhost:5173) in your browser to access the app.
 
 ## Built With
 
