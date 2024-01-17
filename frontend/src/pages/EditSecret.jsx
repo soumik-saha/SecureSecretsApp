@@ -17,7 +17,7 @@ const EditSecret = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://secure-secrets-app.onrender.com/secrets/${id}`)
+      .get(`${import.meta.env.VITE_BACKEND_API}/secrets/${id}`)
       .then((response) => {
         setContent(response.data.content);
         setLoading(false);
@@ -36,7 +36,7 @@ const EditSecret = () => {
     };
     setLoading(true);
     axios
-      .put(`https://secure-secrets-app.onrender.com/secrets/${id}`, data)
+      .put(`${import.meta.env.VITE_BACKEND_API}/secrets/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Secret Edited Successfully', { variant: 'success' })

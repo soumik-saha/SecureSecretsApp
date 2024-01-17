@@ -15,7 +15,7 @@ const DeleteSecret = () => {
   const handleDeleteSecret = () => {
     setLoading(true);
     axios
-      .delete(`https://secure-secrets-app.onrender.com/secrets/${id}`)
+      .delete(`${import.meta.env.VITE_BACKEND_API}/secrets/${id}`)
       .then((response) => {
         setLoading(false);
         enqueueSnackbar('Secret Deleted Successfully', { variant: 'success' })

@@ -18,7 +18,7 @@ const Dashboard = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`https://secure-secrets-app.onrender.com/secrets`)
+      .get(`${import.meta.env.VITE_BACKEND_API}/secrets`)
       .then((response) => {
         setSecrets(response.data.data);
         setLoading(false);

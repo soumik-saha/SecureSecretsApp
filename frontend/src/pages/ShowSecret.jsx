@@ -14,7 +14,7 @@ const ShowSecret = () => {
   useEffect(() => {
     setLoading(true);  
     axios
-      .get(`https://secure-secrets-app.onrender.com/secrets/${id}`)
+      .get(`${import.meta.env.VITE_BACKEND_API}/secrets/${id}`)
       .then((response) => {
         setSecret(response.data);
         setLoading(false);

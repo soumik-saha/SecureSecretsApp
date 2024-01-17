@@ -18,7 +18,7 @@ const CreateSecret = () => {
     };
     setLoading(true);
     axios
-      .post('https://secure-secrets-app.onrender.com/secrets/', data)
+      .post(`${import.meta.env.VITE_BACKEND_API}/secrets/`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Secret Created Successfully', { variant: 'success' })

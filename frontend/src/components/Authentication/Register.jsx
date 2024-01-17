@@ -24,7 +24,7 @@ const Register = ({ onRegister }) => {
     }
 
     try {
-      const response = await fetch('https://secure-secrets-app.onrender.com/register', {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_API}/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ const Register = ({ onRegister }) => {
       if (response.ok) {
         // Successful registration
         console.log('Registration successful!');
-        window.location.href = `https://secure-secrets-app.netlify.app/login`;
+        window.location.href = `/login`;
         // You may want to redirect the user or update the state to reflect the registration status
       } else {
         // Unsuccessful registration
